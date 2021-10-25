@@ -2399,7 +2399,7 @@ return false
 end
 if text == ("المطورين") and msa3d(msg) then
 local list = bot_data:smembers(ban_id..'Sudo:User')
-t = "\n *𖢅⤈قائمة مطورين البوت* \n*━━━━𝗔𝗡𝗨𝗕𝗜𝗦 ⧫ ━━━━*\n"
+t = "\n *𖢅⤈قائمة مطورين البوت* \n*•═════•| ᴇʟᴋɪɴɢ |•═════•*\n"
 keyboard = {
 {{text = 'مسح المطورين',callback_data=msg.sender_user_id_.."DelLsta".."55"}},
 }
@@ -6060,7 +6060,7 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, 
 end
 if text == ("المطورين") and msa3d(msg) then
 local list = bot_data:smembers(ban_id..'Sudo:User')
-t = "\n *𖢅⤈قائمة مطورين البوت* \n*━━━━𝗔𝗡𝗨𝗕𝗜𝗦 ⧫ ━━━━*\n"
+t = "\n *𖢅⤈قائمة مطورين البوت* \n*•═════•| ᴇʟᴋɪɴɢ |•═════•*\n"
 keyboard = {
 {{text = 'مسح المطورين',callback_data=msg.sender_user_id_.."DelLsta".."55"}},
 }
@@ -8228,7 +8228,7 @@ return false
 end
 if text == ("تاك للمنشئين") or text == ("صيح المنشئين") then
 local list = bot_data:smembers(ban_id..'Constructor'..msg.chat_id_)
-t = "\n *𖢅⤈انت فين يعم نت وهو بيدورو عليكو* \n━━━━𝗔𝗡𝗨𝗕𝗜𝗦 ⧫ ━━━━\n"
+t = "\n *𖢅⤈انت فين يعم نت وهو بيدورو عليكو* \n•═════•| ᴇʟᴋɪɴɢ |•═════•\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -8412,7 +8412,7 @@ end
 
 if text == ("المنشئين") and BasicConstructor(msg) then
 local list = bot_data:smembers(ban_id..'Constructor'..msg.chat_id_)
-t = "\n *𖢅⤈قائمة المنشئين* \n*━━━━𝗔𝗡𝗨𝗕𝗜𝗦 ⧫ ━━━━*\n"
+t = "\n *𖢅⤈قائمة المنشئين* \n*•═════•| ᴇʟᴋɪɴɢ |•═════•*\n"
 keyboard = {
 {{text = 'مسح المنشئين',callback_data=msg.sender_user_id_.."DelLsta".."120"}},
 }
@@ -9453,7 +9453,7 @@ end,nil)
 end
 if text == ("الادمنيه") and Manager(msg) then
 local list = bot_data:smembers(ban_id..'Mod:User'..msg.chat_id_)
-t = "\n *𖢅⤈قائمة الادمنيه* \n*━━━━𝗔𝗡𝗨𝗕𝗜𝗦 ⧫ ━━━━*\n"
+t = "\n *𖢅⤈قائمة الادمنيه* \n*•═════•| ᴇʟᴋɪɴɢ |•═════•*\n"
 keyboard = {
 {{text = 'مسح الادمنيه',callback_data=msg.sender_user_id_.."DelLsta".."160"}},
 }
@@ -9650,7 +9650,7 @@ send(msg.chat_id_, msg.id_, ' 𖢅⤈  تم مسح المنظفين')
 end
 if text == ("المنظفين") and BasicConstructor(msg) then
 local list = bot_data:smembers(ban_id..'siria:MN:TF'..msg.chat_id_)
-t = "\n 𖢅⤈  قائمة المنظفين \n━━━━━━𝓓𝓡𝓖━━━━━━\n"
+t = "\n 𖢅⤈  قائمة المنظفين \n•═════•| ᴇʟᴋɪɴɢ |•═════•\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -9666,7 +9666,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمنظفين") or text == ("صيح المنظفين") then
 local list = bot_data:smembers(ban_id..'siria:MN:TF'..msg.chat_id_)
-t = "\n 𖢅⤈  وينكم تعالو يريدوكم بالجروب \n━━━━━━𝓓𝓡𝓖━━━━━━\n"
+t = "\n 𖢅⤈  وينكم تعالو يريدوكم بالجروب \n•═════•| ᴇʟᴋɪɴɢ |•═════•\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -10002,7 +10002,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمميزين") or text == ("صيح المميزين") then
 local list = bot_data:smembers(ban_id..'Special:User'..msg.chat_id_)
-t = "\n 𖢅⤈  وينكم تعالو يريدوكم بالجروب \n•━═━═━═━𝗔𝗡𝗨??𝗜𝗦 ═━═━═━•\n"
+t = "\n 𖢅⤈  وينكم تعالو يريدوكم بالجروب \n•═════•| ᴇʟᴋɪɴɢ |•═════•\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -10181,7 +10181,7 @@ send(msg.chat_id_, msg.id_, ' 𖢅⤈  تم مسح جميع المتوحدين')
 end
 if text == ("تاك للمتوحدين") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Mote:User'..msg.chat_id_)
-t = "\n 𖢅⤈  قائمة متوحدين الجروب \n⧬━┅┅┄⟞❲[??🅞🅞🅽](t.me/alkingramadan1)❳⟝┄┉┉━⧬\n"
+t = "\n 𖢅⤈  قائمة متوحدين الجروب \n•═════•| ᴇʟᴋɪɴɢ |•═════•\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -10843,7 +10843,7 @@ local alkingramadan1 = bot_data:get(ban_id..'text:ch:user')
 if alkingramadan1 then
 send(msg.chat_id_, msg.id_,'['..alkingramadan1..']')
 else
-send(msg.chat_id_, msg.id_,' 𖢅⤈  لا تستطيع استخدام البوت \n 𖢅⤈   يرجى الاشتراك بالقناه اولا \n 𖢅⤈   اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' 𖢅⤈  لا تستطيع استخدام البوت \n ??⤈   يرجى الاشتراك بالقناه اولا \n 𖢅⤈   اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
@@ -13133,7 +13133,7 @@ for k,v in pairs(zx.ok) do
 i = i + 1
 t = t..i.."-  `"..v.."` \n"
 end
-send(msg.chat_id_, msg.id_, t..'𖢅⤈ قائمه الزخرفه \n•═════•| ᴇʟᴋɪɴɢ |•═════•\nاضغط علي الاسم ليتم نسخه\n⚚━━━━━𝗔𝗡𝗨𝗕𝗜𝗦 ⧫ ━━━━━⚚ٴ\n ◉ ❲[𝗔𝗡𝗨𝗕𝗜𝗦 ⧫  ☽‘](t.me/alkingramadan1)❳ ◉ ')
+send(msg.chat_id_, msg.id_, t..'𖢅⤈ قائمه الزخرفه \n•═════•| ᴇʟᴋɪɴɢ |•═════•\nاضغط علي الاسم ليتم نسخه\n⚚━•═════•| ᴇʟᴋɪɴɢ |•═════•━⚚ٴ\n ◉ ❲[𝙎𝙊𝙐𝙍𝘾𝙀 𝙀𝙇𝙆𝙄𝙉𝙂 ♪‘](t.me/alkingramadan1)❳ ◉ ')
 end
 if text == "ضع رابط" or text == 'وضع رابط' then
 if msg.reply_to_message_id_ == 0  and Mod(msg) then  
@@ -13357,7 +13357,7 @@ send(msg.chat_id_, msg.id_," *𖢅⤈︙تم مسح قائمه المنع*")
 end
 if text == "قائمه المنع" and Manager(msg) then   
 tdcli_function ({ID = "GetUser",user_id_ = ban_id},function(arg,data) 
-local Text = "\n *𖢅⤈︙قائمة المنع* \n*ٴ━━━━𝗔𝗡𝗨𝗕𝗜𝗦 ⧫ ━━━━*\n"
+local Text = "\n *𖢅⤈︙قائمة المنع* \n*ٴ•═════•| ᴇʟᴋɪɴɢ |•═════•*\n"
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'صور', url="https://t.me/"..data.username_.."?start=ph"..msg.chat_id_},{text = 'كلمات', url="https://t.me/"..data.username_.."?start=msg"..msg.chat_id_}},
