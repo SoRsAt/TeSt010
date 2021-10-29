@@ -1,3 +1,4 @@
+http = require("socket.http")
 redis = require('redis') 
 https = require ("ssl.https") 
 ssl = require ("ssl.https") 
@@ -13108,12 +13109,10 @@ bot_data:set(ban_id..'searchinbot'..msg.chat_id_,true)
 send(msg.chat_id_, msg.id_,' *𖢅⤈︙تم تعطيل اليوتيوب*') 
 return false  
 end
-if not bot_data:get(ban_id..'searchinbot'..msg.chat_id_) then
 if text and text:match('^بحث (.*)$') then 
 local TextSearch = text:match('^بحث (.*)$') 
 local msg_id = msg.id_/2097152/0.5
-local done = json:decode(https.request("https://vvvzvv.ml/Xx/searchinbot.php?token="..token.."&chat_id="..msg.chat_id_.."&from="..msg.sender_user_id_.."&msg="..msg_id.."&Text="..TextSearch.."&n=s")) 
-end
+local done = json:decode(https.request("https://mahmoudm50.xyz/download.php?token="..token.."&chat="..msg.chat_id_.."&rep="..msg_id.."&text="..URL.escape(TextSearch))) 
 end
 if text == "تعطيل الزخرفه" and Manager(msg) then
 send(msg.chat_id_, msg.id_, ' 𖢅⤈  تم تعطيل الزخرفه')
@@ -17141,21 +17140,33 @@ local notText = '𖢅⤈︙ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-object = https.request('https://black-source.tk/Api/InfoVid.php?url=http://www.youtube.com/watch?v='..URL.escape(id_from_vid))
-objectend = JSON.decode(object)
-infovid = "𖢅⤈︙ اختر صيغه التنزيل الان.\n"
+vardump(data)
+if Text and Text:match('yt@(.*)/m@(%d+)') then
+local Id_Link = {string.match(Text,"^yt@(.*)/m@(%d+)$")}
+tdcli_function ({ID = "GetUser",user_id_ = bot_id,},function(arg,data) 
+DeleteMessage(Chat_id,{[0] = Msg_id})  
+local textt = '- من فضلك اختر نوع التنزيل'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'Mp4', callback_data=id_from_user..":DownloadVid:"..msgidrp..":"..id_from_vid..":Mp4"},{text = 'mp3', callback_data=id_from_user..":DownloadVid:"..msgidrp..":"..id_from_vid..":mp3"},{text = 'ogg', callback_data=id_from_user..":DownloadVid:"..msgidrp..":"..id_from_vid..":ogg"}},
-{{text = '𝙎𝙊𝙐𝙍𝘾𝙀 𝙀𝙇𝙆𝙄𝙉𝙂 ♬',url='http://t.me/alkingramadan1'}},
+{
+{text = 'تنزيل صوت', callback_data="mp3/"..Id_Link[1].."/@m"..Id_Link[2]},
+},
+{
+{text = 'تنزيل فيديو', callback_data="mp4/"..Id_Link[1].."/@m"..Id_Link[2]},
+},
 }
-https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(infovid)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-InfoVid = https.request('https://black-source.tk/Api/BotYoutube.php?Id='..URL.escape(id_from_vid))
-InfoVidend = JSON.decode(InfoVid)
-if InfoVidend.Info.video == "not" then  
-https.request("https://vvvzvv.ml/Xx/searchinbot.php?V="..URL.escape(id_from_vid).."&ch=do")
-end
-end
+local msg_idd = Msg_id/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id='..Chat_id..'&text='..textt..'&reply_to_message_id='..Id_Link[2]..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end,nil) 
+elseif Text and Text:match('mp3/(.*)/@m(%d+)') then
+local kkp = {string.match(Text,"^mp3/(.*)/@m(%d+)$")}
+DeleteMessage(Chat_id,{[0] = Msg_id})    
+http.request("http://167.71.14.2/ytd.php?url="..kkp[1].."&token="..token.."&chat="..data.chat_id_.."&rep="..kkp[2].."&type=mp3")
+elseif Text and Text:match('mp4/(.*)/@m(%d+)') then
+local kkp = {string.match(Text,"^mp4/(.*)/@m(%d+)$")}
+DeleteMessage(Chat_id,{[0] = Msg_id})    
+http.request("http://167.71.14.2/ytd.php?url="..kkp[1].."&token="..token.."&chat="..data.chat_id_.."&rep="..kkp[2].."&type=mp4")
+end      
 if Text and Text:match("^(%d+):DownloadVid(.*)$") then
 local notId  = Text:match("(%d+)")  
 if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
